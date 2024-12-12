@@ -1,0 +1,543 @@
+/* Body and general CSS parameters */
+* {
+    margin: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    transition: .5s;
+}
+
+/* Navbar - Fixed on the top*/
+nav {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    padding: 8px;
+}
+
+.container {
+    height: 95%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.logo {
+    flex: 1;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+
+.links {
+    align-content: center;
+    text-align: right;
+    flex: 1;
+    align-content: space-between;
+}
+
+.links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+}
+
+.links ul li {
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.link::after {
+    content: '';
+    background: #EEA83B;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    width: 100%;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.link:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+button {
+    margin-left: 16px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid black;
+    padding-left: 32px;
+    padding-right: 32px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#menu {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+
+/* Section 1 - The first paragraph with the button*/
+.sec1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 25%;
+    max-width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.text {
+    margin-top: 1em;
+}
+
+.starttrial {
+    background-color: black;
+    color: white;
+    margin-top: 5%;
+    padding: 16px 32px 16px 32px;
+    cursor: pointer;
+    border: none;
+    transition: .5s;
+}
+
+.starttrial:hover {
+    background-color: #EEA83B;
+    color: black;
+    transition: .5s;
+}
+
+
+/* Section 2 - The text with the images using the flex display*/
+.sec2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 50%;
+    max-width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.images {
+    margin-top: 2em;
+    display: flex;
+    gap: 2em;
+}
+
+img {
+    max-width: fit-content;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.col1 {
+    flex: 1;
+}
+
+.col2 {
+    flex: 1;
+}
+
+.col3 {
+    flex: 1;
+}
+
+.imagetext {
+    text-align: left;
+}
+
+.learnmore {
+    margin-top: 8px;
+    text-align: left;
+    font-size: 12px;
+    transition: .5s;
+}
+
+.learnmore:hover {
+    color: #EEA83B;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+/* Dark mode styling for when the dark mode button is clicked*/
+body.dark {
+    background-color: #2B2B2B;
+    color: white;
+}
+
+button.dark {
+    border: 1px solid white;
+    color: white;
+    background-color: #2B2B2B;
+    transition: .5s;
+}
+
+.logo.dark {
+    flex: 1;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.link.dark {
+    color: white;
+    transition: .5s;
+}
+
+.starttrial.dark {
+    color: black;
+    background-color: white;
+    transition: .5s;
+    border: none;
+}
+
+.starttrial.dark:hover {
+    background-color: #EEA83B;
+    transition: .5s;
+}
+
+#menu.dark {
+    color: white;
+    transition: .5s;
+}
+
+.popup.dark {
+    background-color: white;
+    color: black;
+}
+
+.popup.dark ul li a {
+    color: black;
+}
+
+
+/* Mocha mode for when the mocha mode button is clicked*/
+body.mocha {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+.logo.mocha {
+    flex: 1;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #cdd6f4;
+}
+
+.starttrial.mocha {
+    color: black;
+    background-color: #cdd6f4;
+    transition: .5s;
+    border: none;
+}
+
+.starttrial.mocha:hover {
+    background-color: #cba6f7;
+    color: black;
+    transition: .5s;
+}
+
+#menu.mocha {
+    color: #cdd6f4;
+    transition: .5s;
+}
+
+.popup.mocha {
+    background-color: #cdd6f4;
+    color: black;
+}
+
+.popup.mocha ul li a {
+    color: black;
+}
+
+.link.mocha {
+    color: #cdd6f4;
+}
+
+.link.mocha::after {
+    background: #cba6f7;
+}
+
+.popup.mocha ul li a:hover {
+    color: #1e1e2e;
+    transition: .5s;
+}
+
+.learnmore.mocha:hover {
+    color: #cba6f7;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/* Popup menu for configuration, mainly color schemes*/
+.popup {
+    position: absolute;
+    margin-top: 1em;
+    top: 100%;
+    left: -50%;
+    background-color: black;
+    padding: 8px;
+    border-radius: 4px;
+    z-index: 10;
+    width: 200%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup ul li {
+    padding: 0px;
+    margin: 0px;
+}
+
+.popup ul li a {
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+#menu {
+    color: black;
+    transition: .5s;
+}
+
+.popup ul li a:hover {
+    color: #EEA83B;
+    transition: .5s;
+}
+
+
+/* Floating window when clicking an image */
+/* This ensures that when no image is clicked the modal is hidden, display: hidden; doesn't work */
+.hidden {
+    visibility: hidden;
+}
+
+/* This is the styling for the container of the actual pop up, do NOT add a visibility property */
+#floatingWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Styling of the actual pop up window */
+.floating-content {
+    position: relative;
+    max-width: 80%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Styling for the close button, pretty self explanatory */
+#closeBtn {
+    position: absolute;
+    top: 6px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+
+}
+
+/* Some adjustments for the image to be centered and not have the pointer cursor which gets annoying */
+#modalImage{
+    vertical-align: middle;
+    cursor: default;
+}
+
+/* Styling for the contact form */
+.contact-form {
+    background: transparent;
+    padding: 20px 30px;
+    border-radius: 8px;
+    /* border: 2px solid white; */
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.form-group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.form-group button:hover {
+    background-color: #EEA83B;
+    color: #000;
+}
+
+/* Media queries for displays narrower than 932px */
+@media screen and (max-width: 932px) {
+
+    nav {
+        height: auto;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+        max-width: 100%;
+    }
+
+    .logo {
+        margin-bottom: 8px;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .links ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .links ul li {
+        margin: 0;
+    }
+
+    .link {
+        text-decoration: none;
+        text-align: center;
+        padding: 8px 12px;
+        display: inline-block;
+    }
+
+    .popup {
+        left: -50%;
+        width: 200%;
+    }
+
+    .popup ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .images {
+        flex-direction: column;
+    }
+
+    .container {
+        height: 95%;
+    }
+
+    .sec1 {
+        width: 90%;
+    }
+
+    .sec2 {
+        width: 90%;
+    }
+}

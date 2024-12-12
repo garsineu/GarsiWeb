@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garsi</title>
+    <link rel="icon" href="./media/Favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- A navbar which contains a pop up menu -->
+    <nav>
+        <a href="index.html" class="logo">GARSI</a>
+        <div class="links">
+            <ul>
+                <li>
+                    <a href="#" class="link" id="menu">Options</a>
+                    
+                    <!-- Popup menu elements -->
+                    <div id="popup" class="popup">
+                        <ul>
+                            <li><a href="#" class="lightmode">Light Mode</a></li>
+                            <li><a href="#" class="darkmode">Dark Mode</a></li>
+                            <li><a href="#" class="mochamode">Mocha Mode</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="link" href="https://www.linkedin.com/in/arnau-rojas-tortosa-781260293/" target="_blank">LinkedIn</a></li>
+                <li><a class="link" href="https://www.github.com/garsineu" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Section for the introduction -->
+        <div class="sec1">
+            <h3>System Engineer</h3>
+            <p class="text">
+                With three months experience as a system engineer in Agropienso and motivation to learn,
+                Garsi has learned to adapt
+                to different scenarios with ease, which helped him further develop his skills as a system engineer and
+                his stress management.
+            </p>
+            <button class="starttrial" onclick="window.location.href='form.html';">Contact</button>
+
+        </div>
+
+        <!-- Section for the second paragraph and images with subtext and learn more buttons -->
+        <div class="sec2">
+            <h3>Not Just an Engineer</h3>
+            <p class="text">
+                Garsi, apart from being a system engineer is also a devoted gamer, designer and more, often
+                seen working on creative projects, just like this webpage!
+            </p>
+            <div class="images">
+                <div class="col1">
+                    <img src="./media/Left.png" alt="Bed" class="clickableImage" data-src="./media/Left.png">
+                    <br>
+                    <p class="imagetext">Garsi loves interior design, and he's actively learning Blender.</p>
+                    <p class="learnmore">Learn more</p>
+                </div>
+                <div class="col2">
+                    <img src="./media/Center.png" alt="Bed" class="clickableImage" data-src="./media/Center.png">
+                    <br>
+                    <p class="imagetext">He's also deep into gaming, having spent thousands of hours playing.</p>
+                    <p class="learnmore">Learn more</p>
+                </div>
+                <div class="col3">
+                    <img src="./media/Right.png" alt="Bed" class="clickableImage" data-src="./media/Right.png">
+                    <br>
+                    <p class="imagetext">Whatever he's doing, he needs some great music and a hot coffee.</p>
+                    <p class="learnmore">Learn more</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating window when clicking an image -->
+    <div id="floatingWindow" class="hidden">
+        <div class="floating-content">
+          <span id="closeBtn">&times;</span>
+          <img id="modalImage" src="" alt="Expanded Image">
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

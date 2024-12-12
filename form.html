@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garsi</title>
+    <link rel="icon" href="./media/Favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- A navbar which contains a pop up menu -->
+    <nav>
+        <a href="index.html" class="logo">GARSI</a>
+        <div class="links">
+            <ul>
+                <li>
+                    <a href="#" class="link" id="menu">Options</a>
+                    
+                    <!-- Popup menu elements -->
+                    <div id="popup" class="popup">
+                        <ul>
+                            <li><a href="#" class="lightmode">Light Mode</a></li>
+                            <li><a href="#" class="darkmode">Dark Mode</a></li>
+                            <li><a href="#" class="mochamode">Mocha Mode</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="link" href="https://www.linkedin.com/in/arnau-rojas-tortosa-781260293/" target="_blank">LinkedIn</a></li>
+                <li><a class="link" href="https://www.github.com/garsineu" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <form class="contact-form" action="https://formspree.io/f/xyzyaoqe" method="post">
+        <h2>Contact Me</h2>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="starttrial">Send Message</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
